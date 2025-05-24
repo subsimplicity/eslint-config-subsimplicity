@@ -1,0 +1,54 @@
+{
+  "name": "eslint-config-subsimplicity",
+  "version": "0.1.0",
+  "description": "ESLint config.",
+  "module": "lib/index.mjs",
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:ci": "prettier --check .",
+    "lint": "eslint --fix .",
+    "lint:ci": "eslint .",
+    "postinstall": "husky"
+  },
+  "dependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
+    "@eslint/js": "^9.27.0",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-jsdoc": "^50.6.17",
+    "eslint-plugin-n": "^17.18.0",
+    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-sonarjs": "^3.0.2",
+    "prettier": "^3.5.3",
+    "typescript-eslint": "^8.32.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@types/bun": "latest",
+    "eslint-plugin-eslint-plugin": "^6.4.0",
+    "husky": "^9.1.7"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "exports": {
+    "default": "./lib/index.mjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subsimplicity/eslint-config-subsimplicity.git"
+  },
+  "author": "SubSimplicity",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/subsimplicity/eslint-config-subsimplicity/issues"
+  },
+  "homepage": "https://github.com/subsimplicity/eslint-config-subsimplicity#readme"
+}

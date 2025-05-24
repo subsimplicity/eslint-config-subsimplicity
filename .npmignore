@@ -1,0 +1,9 @@
+.github/
+.husky/
+.idea/
+.gitignore
+.npmignore
+.prettierignore
+bun.lock
+commitlint.config.js
+eslint.config.js

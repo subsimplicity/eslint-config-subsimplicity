@@ -1,0 +1,38 @@
+---
+name: release-please
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@a02a34c4d625f9be7cb89156071d8567266a2445
+        id: release
+        with:
+          release-type: node
+      - name: 📤 Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        if: ${{ steps.release.outputs.release_created }}
+      - name: 📦 Load cache
+        uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684
+        with:
+          path: ~/.bun
+          key: ${{ hashFiles('bun.lock') }}
+        if: ${{ steps.release.outputs.release_created }}
+      - name: 🔧 Install bun
+        uses: oven-sh/setup-bun@735343b667d3e6f658f44d0eca948eb6282f2b76
+        if: ${{ steps.release.outputs.release_created }}
+      - name: ⏳ Installing dependencies
+        run: bun install --frozen-lockfile
+        if: ${{ steps.release.outputs.release_created }}
+      - name: 📤 Publish package
+        run: bun publish
+        env:
+          NPM_CONFIG_TOKEN: ${{secrets.NPM_CONFIG_TOKEN}}
+        if: ${{ steps.release.outputs.release_created }}
