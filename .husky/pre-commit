@@ -1,2 +1,2 @@
-npm run format:ci
-npm run lint:ci
+bun run format:ci
+bun run lint:ci
