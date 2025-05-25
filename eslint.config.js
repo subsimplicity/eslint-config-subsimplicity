@@ -1,4 +1,5 @@
 import eslintPlugin from "eslint-plugin-eslint-plugin";
-import { node } from "./lib/index.mjs";
+// eslint-disable-next-line import/extensions
+import { node } from "./lib/index.js";
 
 export default [...node, eslintPlugin.configs["flat/recommended"]];
