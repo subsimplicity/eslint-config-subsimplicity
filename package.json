@@ -1,6 +1,6 @@
 {
   "name": "@subsimplicity/eslint-config-subsimplicity",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "ESLint config.",
   "module": "lib/index.js",
   "type": "module",
