@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/subsimplicity/eslint-config-subsimplicity/compare/v1.2.0...v1.2.1) (2025-05-26)
+
+
+### Bug Fixes
+
+* add tslib as deps ([#9](https://github.com/subsimplicity/eslint-config-subsimplicity/issues/9)) ([8560db5](https://github.com/subsimplicity/eslint-config-subsimplicity/commit/8560db5b0cd8a1c4652ba9600142d460591910ad))
+
 ## [1.2.0](https://github.com/subsimplicity/eslint-config-subsimplicity/compare/v1.1.0...v1.2.0) (2025-05-25)
 
 
